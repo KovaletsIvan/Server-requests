@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 import List from "./components/list/List";
 
-import { useApi } from "./hook/useApi";
 
 import {
   getUsers,
@@ -17,11 +16,9 @@ import "./App.scss";
 function App() {
   const [users, setUsers] = useState([]);
 
-  // const apiused = useApi()
 
   const getDataFromServer = () => getUsers().then((resp) => setUsers(resp));
 
-  // useEffect(() => apiused(1, { age: 36 }, "PUT"), []);
 
   useEffect(() => getDataFromServer(), []);
 
