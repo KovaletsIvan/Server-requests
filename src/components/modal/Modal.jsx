@@ -29,7 +29,7 @@ const Modal = ({ id, name, email, update, setToggle }) => {
         />
         <input
           className="modal-email"
-          email="email"
+          name="email"
           type="text"
           value={data.email}
           onChange={onChange}
