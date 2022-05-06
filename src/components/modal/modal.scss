@@ -1,0 +1,43 @@
+.modal {
+  position: absolute;
+  top: 3px;
+  right: -193px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 200px;
+  background-color: #f6ddcc;
+  border-radius: 4px;
+  border: 1px solid #566573;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.modal-name,
+.modal-email {
+  height: 20px;
+  width: 95%;
+  padding: 2px 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  color: #566573;
+  font-size: 16px;
+  background-color: #fbeee6;
+}
+.modal-btn {
+  background-color: #e59866;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #566573;
+}
+.modal-btn:hover {
+  background-color: #d35400;
+}

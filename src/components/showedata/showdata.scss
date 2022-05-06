@@ -1,0 +1,46 @@
+.list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: auto;
+  min-height: 100px;
+  margin: 10px;
+  border: 1px solid #566573;
+  border-radius: 4px;
+  padding: 10px;
+  color: #566573;
+}
+.userdata {
+  display: flex;
+  flex-direction: column;
+  color: #566573;
+  gap: 7px;
+  width: 500px;
+  margin: 10px;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  height: 100%;
+  margin-left: auto;
+}
+.removeuser {
+  display: flex;
+  transform: rotate(45deg);
+  cursor: pointer;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+}
+.update {
+  cursor: pointer;
+}
+.removeuser:hover {
+  color: #e59866;
+}
+.update:hover {
+  color: #e59866;
+}
