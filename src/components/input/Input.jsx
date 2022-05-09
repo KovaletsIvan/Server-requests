@@ -4,7 +4,6 @@ import "./input.scss";
 
 const Input = ({ addNewUser }) => {
   const [state, setState] = useState({
-    id: "",
     name: "",
     email: "",
   });
@@ -12,7 +11,6 @@ const Input = ({ addNewUser }) => {
   const onChange = (e) => {
     setState({
       ...state,
-      id: "",
       [e.target.name]: e.target.value,
     });
   };
@@ -23,7 +21,7 @@ const Input = ({ addNewUser }) => {
       onSubmit={(e) => {
         e.preventDefault();
         addNewUser(state);
-        setState({ id: "", name: "", email: "" });
+        setState({ name: "", email: "" });
       }}
     >
       <input

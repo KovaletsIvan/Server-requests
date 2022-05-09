@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+
+
 import Modal from "../modal/Modal";
 
 import "./showdata.scss";
 
-const ShowData = ({ name, email, deletePost, id, update }) => {
+const ShowData = ({ name, email, deleteUser, id, update }) => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -14,7 +16,7 @@ const ShowData = ({ name, email, deletePost, id, update }) => {
           <div className="email"> {email}</div>
         </div>
         <div className="actions">
-          <span className="removeuser" onClick={() => deletePost(id)}>
+          <span className="removeuser" onClick={() => deleteUser(id)}>
             +
           </span>
           <span

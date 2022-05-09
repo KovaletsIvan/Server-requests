@@ -1,11 +1,11 @@
 import React from "react";
 
-import ShowData from "../showedata/ShowData";
+import ShowData from "../showdata/ShowData";
 import Input from "../input/Input";
 import Spinner from "../spinner/Spinner";
 
 
-const List = ({ users, deletePost, addNewUser, update, updateField }) => {
+const List = ({ users, deleteUser, addNewUser, update, updateField }) => {
   if (typeof users === typeof "") {
     return (
       <ul className="list">
@@ -22,7 +22,7 @@ const List = ({ users, deletePost, addNewUser, update, updateField }) => {
           id={user.id}
           name={user.name}
           email={user.email}
-          deletePost={deletePost}
+          deleteUser={deleteUser}
           update={update}
           updateField={updateField}
           

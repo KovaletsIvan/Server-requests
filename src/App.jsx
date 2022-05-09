@@ -16,13 +16,11 @@ import "./App.scss";
 function App() {
   const [users, setUsers] = useState([]);
 
-
   const getDataFromServer = () => getUsers().then((resp) => setUsers(resp));
-
 
   useEffect(() => getDataFromServer(), []);
 
-  const deletePost = (id) => {
+  const deleteUser = (id) => {
     removeUser(id).then(() => getDataFromServer());
   };
 
@@ -38,7 +36,10 @@ function App() {
     patchUser(id, data).then(() => getDataFromServer());
   };
 
-  const dataToShow = users.slice().sort((a, b) => Number(b.id) - Number(a.id));
+  const dataToShow =
+    typeof users !== typeof ""
+      ? users.slice().sort((a, b) => Number(b.id) - Number(a.id))
+      : users;
 
   return (
     <div className="App">
@@ -47,7 +48,7 @@ function App() {
       </div>
       <List
         users={dataToShow}
-        deletePost={deletePost}
+        deleteUser={deleteUser}
         addNewUser={addNewUser}
         update={update}
         updateField={updateField}
